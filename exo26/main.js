@@ -19,8 +19,6 @@ const mailTable = document.querySelector("#mailTable");
 
 let submitGender, submitName, submitSurname, submitBirthdate, submitPhoneNumber, submitMail;
 
-let contactsList = Array();
-
 submitForm.addEventListener("click",(e) => {
     e.preventDefault();
 
@@ -32,9 +30,6 @@ submitForm.addEventListener("click",(e) => {
     submitMail = contactMail.value;
 
     let contact = new Contact(submitGender,submitName, submitSurname, submitBirthdate, submitPhoneNumber, submitMail)
-
-    contactsList.push(contact);
-    console.log(contactsList);
 
     contactsTable.innerHTML += 
     `<tr>
