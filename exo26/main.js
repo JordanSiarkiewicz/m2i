@@ -3,12 +3,7 @@ import { Contact } from "./class/contact.js";
 const submitForm = document.querySelector("#submitForm");
 const contactsTable = document.querySelector("#result");
 
-const contactGender =  document.querySelector('input[name=titre]');
-const contactName = document.querySelector("#contact-name");
-const contactSurname = document.querySelector("#contact-surname");
-const contactBirthdate = document.querySelector("#contact-birthdate");
-const contactPhoneNumber = document.querySelector("#contact-phone");
-const contactMail = document.querySelector("#contact-mail");
+
 
 const genderTable =  document.querySelector("#genderTable");
 const nameTable = document.querySelector("#nameTable");
@@ -22,14 +17,14 @@ let submitGender, submitName, submitSurname, submitBirthdate, submitPhoneNumber,
 submitForm.addEventListener("click",(e) => {
     e.preventDefault();
 
-    submitGender = contactGender.value;
-    submitName = contactName.value;
-    submitSurname = contactSurname.value;
-    submitBirthdate = contactBirthdate.value;
-    submitPhoneNumber = contactPhoneNumber.value;
-    submitMail = contactMail.value;
+    const contactGender =  document.querySelector("input[name='titre']:checked").value;
+    const contactName = document.querySelector("#contact-name").value;
+    const contactSurname = document.querySelector("#contact-surname").value;
+    const contactBirthdate = document.querySelector("#contact-birthdate").value;
+    const contactPhoneNumber = document.querySelector("#contact-phone").value;
+    const contactMail = document.querySelector("#contact-mail").value;
 
-    let contact = new Contact(submitGender,submitName, submitSurname, submitBirthdate, submitPhoneNumber, submitMail)
+    let contact = new Contact(contactGender,contactName, contactSurname, contactBirthdate, contactPhoneNumber, contactMail)
 
     contactsTable.innerHTML += 
     `<tr>
