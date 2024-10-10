@@ -3,17 +3,6 @@ import { Contact } from "./class/contact.js";
 const submitForm = document.querySelector("#submitForm");
 const contactsTable = document.querySelector("#result");
 
-
-
-const genderTable =  document.querySelector("#genderTable");
-const nameTable = document.querySelector("#nameTable");
-const surnameTable = document.querySelector("#surnameTable");
-const birthdateTable = document.querySelector("#birthdateTable");
-const phoneTable = document.querySelector("#phoneTable");
-const mailTable = document.querySelector("#mailTable");
-
-let submitGender, submitName, submitSurname, submitBirthdate, submitPhoneNumber, submitMail;
-
 submitForm.addEventListener("click",(e) => {
     e.preventDefault();
 
