@@ -10,8 +10,6 @@ import { Component } from '@angular/core';
 export class CounterComponent {
   count: number = 0
 
-  
-
   colorGreen: string = 'green'
   colorRed: string = 'red'
 
@@ -35,5 +33,4 @@ export class CounterComponent {
     this.pairCheck ()
   }
 
-  
 }

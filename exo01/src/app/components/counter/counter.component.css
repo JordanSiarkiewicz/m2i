@@ -11,4 +11,19 @@
     width: 50%;
     border: 2px solid;
     padding: 10px;
+    border-radius: 20px;
 }
+
+.main {
+    margin-top: 50px;
+    display:flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
+
