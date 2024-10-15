@@ -1,0 +1,14 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.container {
+    text-align: center;
+    width: 50%;
+    border: 2px solid;
+    padding: 10px;
+}
