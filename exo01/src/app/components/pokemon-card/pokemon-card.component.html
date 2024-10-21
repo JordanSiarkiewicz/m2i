@@ -1,0 +1,30 @@
+<ul>
+    <li class="container">
+        <span>
+            <div>
+                <p><u>NOM</u> : <b>{{ pokemon.nom }}</b></p>
+            </div>
+
+            <div>
+               <p><u>DESCRIPTION</u> : <b>{{pokemon.description}}</b></p>
+            </div>
+
+            <div>
+                <p><u>TYPE(S)</u> : <b>{{pokemon.type}}</b></p>
+            </div>
+
+            <div>
+                <p><u>ATTAQUES</u> : <b>{{pokemon.attackList}}</b></p>
+            </div>
+
+            <div>
+                @for(zone of pokemon.zone; track zone){
+                <p><u>ZONE</u> : <b>{{zone.nom}} {{zone.region}}</b></p>
+                }
+            </div>
+        </span> 
+    </li>
+    <div>
+        <button (click)="sendData()">Supprimer</button>
+    </div>
+</ul>

@@ -1,0 +1,21 @@
+
+
+<section class="main-series">
+
+    <h2 class="series-title">Ma liste de series</h2>
+
+    @for (serie of series | filtertable : filterTable; track serie; let i = $index){
+    <ul>
+        <li class="list-series">
+            <span>- {{ serie }}</span>
+            <button class="button-serie" (click)="delete(i)" class="button">✘</button>
+        </li>
+    </ul>
+    } @empty {
+    <p>Aucune série en cours</p>
+    }
+    <div class="filter-button-div">
+        <button class="filter-button" (click)="filterasc()">filter asc ↓</button>
+        <button class="filter-button" (click)="filterdesc()">filter desc ↑</button>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+.main {
+    /* margin: 10px; */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/26887395-78f4-441d-a6e0-cc877fa24b54/def6cvb-2594dc31-962d-4f83-b815-3889e2d752f1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI2ODg3Mzk1LTc4ZjQtNDQxZC1hNmUwLWNjODc3ZmEyNGI1NFwvZGVmNmN2Yi0yNTk0ZGMzMS05NjJkLTRmODMtYjgxNS0zODg5ZTJkNzUyZjEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.va9mNqAZAdtglDY-Ma0m8HuOeo3Rt1_pwFEPMzrT2Lk");
+    background-attachment: fixed;
+}
+
+.main2 {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 30px;
+    background-color: yellow;
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0)
+}
+
+.input {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    background-color: white;
+    
+}
+
+.fieldset {
+    border: 1px solid;
+    /* width: 30%; */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fieldset-module {
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+.field {
+    background-color: rgb(172, 172, 172);
+    padding: 20px;
+    /* width: 30%; */
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow:
+    inset 0 -0.5em 0.5em rgba(0, 0, 0, 0.3),
+    0.3em 0.3em 1em rgba(63, 63, 63, 0.6);
+}
+
+.button {
+    background-color: rgb(118, 37, 250);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.container {
+    background-color: rgb(118, 37, 250);
+    color: white;
+    border-radius: 10px;
+    border-bottom: 10px;
+    width:fit-content;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}

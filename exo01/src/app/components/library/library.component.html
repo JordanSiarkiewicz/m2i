@@ -1,0 +1,50 @@
+<div class="main">
+    <h2 class="books-title"><b>Mes livres</b></h2>
+    <section class="book-section">
+    @for (book of books; track book; let i = $index){
+        <ul>
+            <li class="book-li">
+                <span class="container">
+                    <img class="img" [src]="book.img">
+                    <b>📙 {{ book.title }}</b>
+                    <div class="author">
+                        <hr>🖍{{book.author}}
+                    </div>
+                    <hr>
+                    @if (book.isRead == true) {
+                        <div>Lu : 👍</div>
+                    } @else {
+                        <div>Lu : 👎</div>
+                    }
+                </span> 
+                
+            </li>
+            <div class="read-button">
+                <button class="button-read" (click)="read(book)">{{ book.isRead ? "Je n'ai pas lu" : "J'ai lu"}}</button>
+            </div>
+        </ul>
+        } @empty {
+        <p>Aucune livre dans la bibliothèque</p>
+        }
+        
+    </section>
+
+    <section class="ajout">
+        <h2 class="books-title"><b>Ajoutez un nouveau livre :</b></h2>
+        <form class="form"  (ngSubmit)="submitBook()">
+            <div class="input-container">
+                <label for="title">Titre du livre : </label>
+                <input class="input" type="text" id="title" name="title" [(ngModel)]="book.title" />
+            </div>
+            <div class="input-container">
+                <label for="author">Auteur du livre : </label>
+                <input class="input" type="text" id="author" name="author" [(ngModel)]="book.author" />
+            </div>
+            <div class="input-container">
+                <label for="img">Url de la couverture du livre : </label>
+                <input class="input" type="text" id="img" name="img" [(ngModel)]="book.img" />
+            </div>
+            <button class="ajout-livre-button">Ajouter le livre</button>
+        </form>
+    </section>
+</div>

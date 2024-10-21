@@ -1,0 +1,18 @@
+.main-navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-list {
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

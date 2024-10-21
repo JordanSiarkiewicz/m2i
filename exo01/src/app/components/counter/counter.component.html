@@ -1,0 +1,13 @@
+<div class="main">
+    <div class="container">
+        <h1 class="title"><b>Mon compteur</b></h1>
+        <hr>
+        <div class="compteur">
+            <h2 [class]="isPair ? colorGreen : colorRed"><b>{{count}}</b></h2>
+        </div>
+        <div>
+            <button class="button" (click)="decrementer()"> < décrémenter  </button>
+            <button class="button" (click)="incrementer()">  incrémenter > </button>
+    </div>
+    </div>
+</div>

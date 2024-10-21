@@ -1,0 +1,124 @@
+
+<section class="main">
+    
+    <form [formGroup]="pokemon_form" (ngSubmit)="save_pokemon()" >
+        <h2 class="title"><b>Créer un Pokemon</b></h2>
+        <!-- NOM -->
+        <div class="field">
+            <label for="nom">Nom : </label>
+            <input class="input" type="text" id="nom" formControlName="nom">
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="field">
+            <label for="description">Description : </label>
+            <input class="input" type="text" id="description" formControlName="description">
+        </div>
+
+        <!-- TYPES -->
+        <fieldset class="field" formGroupName="types">
+
+            <legend ><b>Types</b></legend>
+            @for (control of types.controls; track control; let i = $index){
+                <fieldset class="fieldset-module" [formGroupName]="$index">
+                    <legend>Type {{$index + 1}}</legend>
+                    <div>
+                        <label for="nom">Nom : </label>
+                        <input class="input" type="text" id="nom" formControlName="nom">
+                    </div>
+                </fieldset>
+            }
+            <button type="button" (click)="addType()">Ajouter un type supplémentaire ➕</button>
+     </fieldset>
+
+        <!-- ATTAQUES -->
+         <fieldset class="field" formGroupName="modules">
+
+                <legend ><b>Attaques</b></legend>
+                @for (control of modules.controls; track control; let i = $index){
+                    <fieldset class="fieldset-module" [formGroupName]="$index">
+                        <legend>Attaque {{$index + 1}}</legend>
+                        <div>
+                            <label for="nom">Nom : </label>
+                            <input class="input" type="text" id="nom" formControlName="nom">
+                        </div>
+                        <div>
+                            <label for="description">description : </label>
+                            <input class="input" type="text" id="description" formControlName="description">
+                        </div>
+                        <div>
+                            <label for="degats">dégats : </label>
+                            <input class="input" type="text" id="degats" formControlName="degats">
+                        </div>
+                    </fieldset>
+                }
+                <button type="button" (click)="addModule()">Ajouter une attaque supplémentaire ➕</button>
+         </fieldset>
+
+        <!-- ZONE -->
+         <fieldset class="field">
+            <fieldset class="fieldset" formGroupName="zone">
+                <legend><b>Zone</b></legend>
+                <div>
+                    <label for="nom">Nom : </label>
+                    <input class="input" type="text" id="nom" formControlName="nom">
+                </div>
+                <div>
+                    <label for="region">Région : </label>
+                    <input class="input" type="text" id="region" formControlName="region">
+                </div>
+            </fieldset>
+        </fieldset>
+        
+        <button type="submit" class="button"><b>Sauvegarder</b></button>
+    </form>
+
+</section>
+<hr>
+<!-- AFFICHAGE DES POKEMONS -->
+<div class="main2">
+    
+    <h2 class="title"><b>Mes Pokemons</b></h2>
+
+    @for (pokemon of pokemonList; track pokemon; let i = $index) {
+        <app-pokemon-card [pokemon]="pokemon"/>
+    }
+</div>
+
+<!-- <div class="main2">
+    
+    <section class="book-section">
+
+        @for (pokemon of pokemonList; track pokemon; let i = $index){
+            <ul>
+                <li class="container">
+                    <span>
+                        <div>
+                            <p><u>NOM</u> : <b>{{ pokemon.nom }}</b></p>
+                        </div>
+
+                        <div>
+                           <p><u>DESCRIPTION</u> : <b>{{pokemon.description}}</b></p>
+                        </div>
+
+                        <div>
+                            <p><u>TYPE(S)</u> : <b>{{pokemon.type}}</b></p>
+                        </div>
+
+                        <div>
+                            <p><u>ATTAQUES</u> : <b>{{pokemon.attackList}}</b></p>
+                        </div>
+
+                        <div>
+                            <p><u>ZONE</u> : <b>{{pokemon.zone}}</b></p>
+                        </div>
+                    </span> 
+                    
+                </li>
+            </ul>
+            } @empty {
+            <p>Aucun Pokemon Sauvegardé à l'heure actuelle !</p>
+            }
+            
+    </section> 
+</div> -->

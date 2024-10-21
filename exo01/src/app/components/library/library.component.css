@@ -1,0 +1,105 @@
+.book-li {
+    background-color:aquamarine;
+    color: black;
+    padding: 5px;
+    margin-bottom:5px;
+    border-radius: 10px;
+    text-align: center;
+    border-bottom: 5px solid rgb(85, 165, 137);
+    border-left: 5px solid rgb(85, 165, 137);
+}
+
+.read-button {
+    text-align:center;
+}
+
+.book-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 20px;
+}
+
+.button-read {
+    border-bottom: 5px solid rgb(198, 158, 236);
+    border-left: 5px solid rgb(198, 158, 236);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(126, 57, 190);
+    color: white;
+}
+
+.button-read:hover {
+    border-bottom: 5px solid rgb(198, 158, 236);
+    border-left: 5px solid rgb(198, 158, 236);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(89, 40, 134);
+    color: white;
+}
+
+.author {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.books-title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(126, 57, 190);
+    text-decoration: underline;
+}
+
+.img {
+    height: 200px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    border: 1px solid rgb(126, 57, 190);
+    border-radius: 5px;
+}
+
+.input-container {
+    margin-bottom: 5px;
+}
+
+.form {
+    text-align: center;
+}
+
+.ajout-livre-button{
+    background-color: rgb(126, 57, 190);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border-bottom: 5px solid rgb(198, 158, 236);
+    border-left: 5px solid rgb(198, 158, 236);
+}
+
+.ajout-livre-button:hover {
+    background-color: rgb(89, 40, 134);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border-bottom: 5px solid rgb(198, 158, 236);
+    border-left: 5px solid rgb(198, 158, 236);
+}
+
+.ajout {
+    background-color:rgb(207, 255, 239);
+    padding: 20px;
+    color : rgb(126, 57, 190)
+}
+
