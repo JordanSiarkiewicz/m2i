@@ -1,0 +1,39 @@
+<section class="product-card">
+    <ul>
+        <li class="container">
+            <span>
+                <div >
+                    <img class="img" src="{{product.img}}">
+                </div>
+                <div>
+                    <p class="product-title"><b>{{ product.nom }}</b></p>
+                </div>
+
+                <div><hr class="separator"></div>
+
+                <div>
+                <small><u>DESCRIPTION</u> : {{product.description}}</small>
+                </div>
+
+                <div>
+                    <small><u>MARQUE</u> : <b>{{product.marque}}</b></small>
+                </div>
+
+                <div>
+                    <small><u>STOCK</u> : <b>{{product.stock}}</b></small>
+                </div>
+
+                <div>
+                    <small><u>DISPONIBLE</u> : <b>{{product.isAvailable}}</b></small>
+                </div>
+                
+                <div><hr class="separator"></div>
+
+                <div>
+                    <p class="prix"><b>{{product.prix}}€</b></p>
+                </div>
+
+            </span> 
+        </li>
+    </ul>
+</section>

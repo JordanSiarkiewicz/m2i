@@ -1,0 +1,13 @@
+<h2 class="title"><strong>NOS PRODUITS</strong></h2>
+<section class="product-list">
+
+    @for (product of productList; track product) {
+        <div class="product-card">
+            <app-productcard [product]="product"/>
+            <button class="add-button" (click)="addToBasket(product)">Ajouter au panier</button>
+        </div>
+    } @empty {
+        <p>Aucun produit pour le moment ...</p>
+    }
+
+</section>

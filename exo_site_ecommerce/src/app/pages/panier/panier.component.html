@@ -1,0 +1,13 @@
+<h2 class="title"><strong>MON PANIER</strong></h2>
+<section class="product-list">
+    
+    @for (product of productList; track product) {
+        <div class="product-card">
+            <app-productcard [product]="product" />
+            <button class="delete-button" (click)="deleteProduct(product)">Supprimer</button>
+        </div>
+    } @empty {
+        <p>Aucun produit pour le moment ...</p>
+    }
+
+</section>

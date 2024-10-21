@@ -1,0 +1,59 @@
+<section class="create-product">
+
+    <h2 class="title">CREER UN NOUVEAU PRODUIT</h2>
+
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()" class="bg-slate-200 space-y-6 p-8 rounded-lg mx-auto">
+        
+        <div>
+            <label for="nom" class="block text-sm text-slate-700">Nom : </label>
+            <input type="text" id="nom" formControlName="nom" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md">
+        </div>
+
+        <div>
+            <label for="description" class="block text-sm text-slate-700">Description : </label>
+            <textarea type="text" id="description" formControlName="description" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md"></textarea>
+        </div>
+
+        <div>
+            <label for="marque" class="block text-sm text-slate-700">Marque : </label>
+            <input type="text" id="marque" formControlName="marque" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md">
+        </div>
+
+        <div>
+            <label for="prix" class="block text-sm text-slate-700">Prix : </label>
+            <input type="number" id="prix" formControlName="prix" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md">
+        </div>
+
+        <div>
+            <label for="stock" class="block text-sm text-slate-700">Stock : </label>
+            <input type="number" id="stock" formControlName="stock" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md">
+        </div>
+
+        <div>
+            <label for="img" class="block text-sm text-slate-700">Url de l'image : </label>
+            <input type="text" id="img" formControlName="img" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md">
+        </div>
+
+        <div>
+            <label for="isAvailable" class="block text-sm text-slate-700">Disponible : </label>
+            <input type="checkbox" id="isAvailable" formControlName="isAvailable" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md">
+        </div>
+    
+    
+        <button type="submit" class="mt-2 w-full py-3 px-6 bg-slate-600 text-white hover:bg-slate-400 rounded">Sauvegarder le produit</button>
+    </form>
+</section>
+<h2 class="title2">LISTE DES PRODUITS</h2>
+<section class="product-list">
+
+    @for (product of productList; track product) {
+        <div class="product-card">
+            <app-productcard [product]="product" />
+            <button class="delete-button" (click)="deleteProduct(product)">Supprimer</button>
+        </div>
+    } @empty {
+        <p>Aucun produit pour le moment ...</p>
+    }
+
+</section>
+
